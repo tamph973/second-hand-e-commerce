@@ -1,0 +1,37 @@
+import { Router } from 'express';
+import { AuthRoute } from './auth.route.js';
+import { UploadRoute } from './upload.route.js';
+import { UserRoute } from './user.route.js';
+import { AddressRoute } from './address.route.js';
+import { CategoryRoute } from './category.route.js';
+import { BrandRoute } from './brand.route.js';
+import { SellerRoute } from './seller.route.js';
+import { ProductRoute } from './product.route.js';
+import { CartRoute } from './cart.route.js';
+import { WishlistRoute } from './wishlist.route.js';
+import { imageModerationRoutes } from './imageModeration.routes.js';
+import { PaymentRoutes } from './payment.routes.js';
+import { OrderRoutes } from './order.routes.js';
+import ReviewRoute from './review.route.js';
+import { VariantRoute } from './variant.route.js';
+import { DiscountRoute } from './discount.route.js';
+
+const router = Router();
+
+router.use('/auth', AuthRoute);
+router.use('/uploads', UploadRoute);
+router.use('/users', UserRoute);
+router.use('/address', AddressRoute);
+router.use('/categories', CategoryRoute);
+router.use('/brands', BrandRoute);
+router.use('/sellers', SellerRoute);
+router.use('/products', ProductRoute);
+router.use('/variants', VariantRoute);
+router.use('/carts', CartRoute);
+router.use('/wishlists', WishlistRoute);
+router.use('/orders', OrderRoutes);
+router.use('/payments', PaymentRoutes);
+router.use('/image-moderation', imageModerationRoutes);
+router.use('/reviews', ReviewRoute);
+router.use('/discounts', DiscountRoute);
+export const APIs_V1 = router;
