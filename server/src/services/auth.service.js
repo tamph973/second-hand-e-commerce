@@ -1,11 +1,12 @@
 import sendEmail from '../configs/sendEmail.js';
 import UserModel from '../models/user.model.js';
 import convertDate from '../utils/convertDate.js';
-import forgotPasswordTemplate from '../utils/forgotPasswordTemplate.js';
-import generateOTP from '../utils/generatedOTP.js';
+import {
+	generateOTP,
+	generateRandomPassword,
+	toPhoneE164,
+} from '../utils/helpers.js';
 import JWTService from '../services/jwt.service.js';
-import changePasswordTemplate from '../utils/changePasswordTemplate.js';
-import verifyEmailTemplate from '../utils/verifyEmailTemplate.js';
 import bcrypt from 'bcrypt';
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
@@ -20,11 +21,8 @@ import {
 	ERROR_MESSAGES,
 } from '../constants/auth.constants.js';
 import { registerSchema, loginSchema } from '../validators/auth.validator.js';
-import verifyChangeEmailTemplate from '../utils/verifyChangeEmailTemplate.js';
-import defaultPasswordTemplate from '../utils/defaultPasswordTemplate.js';
-import generateRandomPassword from '../utils/generateRandomPassword.js';
+import { changePasswordTemplate } from '../templates/index.js';
 import sendSMS from '../configs/sendSMS.js';
-import { toPhoneE164 } from '../utils/helpers.js';
 
 class AuthService {
 	async register({ fullName, email, password }) {

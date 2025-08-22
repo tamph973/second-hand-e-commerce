@@ -3,8 +3,8 @@ import Errors from '../common/response/error.response.js';
 import PaymentModel from '../models/payment.model.js';
 import { calculateSellerAmount } from '../utils/helpers.js';
 import { sendNotification } from '../server.js';
-import DiscountModel from '../models/discount.model.js';
 import ProductModel from '../models/product.model.js';
+import { generateOrderCode } from '../utils/helpers.js';
 
 export const createOrder = async (buyerId, orderData) => {
 	const {
@@ -25,41 +25,13 @@ export const createOrder = async (buyerId, orderData) => {
 		return groups;
 	}, {});
 
-	// Tạo đơn hàng cho từng seller (1 đơn chứa nhiều người bán)
-	// const sellers = Object.entries(sellerGroups).map(([sellerId, items]) => {
-	// 	const sellerInfo = items[0];
-	// 	const products = sellerInfo.products;
-	// 	const subTotal = products.reduce(
-	// 		(sum, product) =>
-	// 			sum + Number(product.price) * Number(product.quantity),
-	// 		0,
-	// 	);
-	// 	return {
-	// 		sellerId,
-	// 		items: products.map((product) => ({
-	// 			productId: product.id,
-	// 			quantity: product.quantity,
-	// 			price: product.price,
-	// 		})),
-	// 		subTotal,
-	// 		shippingFee: 0,
-	// 		status: 'PENDING',
-	// 		fullName: sellerInfo.fullName,
-	// 		address: sellerInfo.address,
-	// 		avatar: sellerInfo.avatar,
-	// 	};
-	// });
-	// const order = await OrderModel.create({
-	// 	buyer: buyerId,
-	// 	sellers,
-	// });
-
 	const orders = await Promise.all(
 		Object.entries(sellerGroups).map(async ([sellerId, items]) => {
 			const subTotal = items[0].products.reduce((sum, item) => {
 				return sum + item.price * item.quantity;
 			}, 0);
 			const order = await OrderModel.create({
+				orderCode: generateOrderCode(),
 				buyer: buyerId,
 				seller: sellerId,
 				items: items[0].products.map((item) => ({

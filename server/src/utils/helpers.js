@@ -2,6 +2,7 @@ import moment from 'moment';
 import CategoryModel from '../models/category.model.js';
 import OrderModel from '../models/order.model.js';
 import BrandModel from '../models/brand.model.js';
+import crypto from 'crypto';
 
 export const toPhoneE164 = (phoneNumber) => {
 	phoneNumber = phoneNumber.trim();
@@ -330,7 +331,7 @@ export const buildProductQuery = async (options = {}) => {
 		category_id = 'ALL',
 		category_slug = 'ALL', // Thêm parameter mới cho slug
 		search,
-		status,
+		status = 'ALL',
 		minPrice = '',
 		maxPrice = '',
 		condition,
@@ -342,7 +343,10 @@ export const buildProductQuery = async (options = {}) => {
 		brand,
 	} = options;
 
-	const query = { _destroy: false };
+	const query = {
+		_destroy: false,
+		verifyStatus: 'APPROVED',
+	};
 
 	// Filter by category (including child categories)
 	if (category_id !== 'ALL') {
@@ -395,7 +399,7 @@ export const buildProductQuery = async (options = {}) => {
 	}
 
 	// Filter by status
-	if (status) {
+	if (status !== 'ALL') {
 		query.verifyStatus = status;
 	}
 
@@ -482,13 +486,13 @@ export const buildProductQuery = async (options = {}) => {
 
 /**
  * Tạo mã đơn hàng theo quy tắc: thương hiệu + ngày đặt + số thứ tự đơn hàng
- * Ví dụ:  EC20241201001 (EC + 20241201 + 001)
+ * Ví dụ:  SECOM20250818001 (SECOM + 20250818 + 001)
  */
-export const generateOrderCode = async (brand = 'EC') => {
+export const generateOrderCode = async (brand = 'SECOM') => {
 	try {
 		// Lấy ngày hiện tại theo format DDMMYYYY
 		const today = new Date();
-		const dateString = moment(today).format('DDMMYYYY');
+		const dateString = moment(today).format('YYYYMMDD');
 
 		// Tìm số thứ tự đơn hàng trong ngày hôm nay
 		const startOfDay = moment(today).startOf('day').toDate();
@@ -514,4 +518,39 @@ export const generateOrderCode = async (brand = 'EC') => {
 	} catch (error) {
 		throw new Error(`Lỗi tạo mã đơn hàng: ${error.message}`);
 	}
+};
+
+export const calculateCommission = (amount) => {
+	// Ví dụ: 5% hoa hồng
+	return Math.round(amount * 0.05);
+};
+
+export const generateRandomPassword = () => {
+	const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+	const numbers = '0123456789';
+
+	// Ensure at least one of each type
+	let password = '';
+	password +=
+		uppercaseChars[Math.floor(Math.random() * uppercaseChars.length)];
+	password +=
+		lowercaseChars[Math.floor(Math.random() * lowercaseChars.length)];
+	password += numbers[Math.floor(Math.random() * numbers.length)];
+
+	// Fill the rest randomly
+	const allChars = uppercaseChars + lowercaseChars + numbers;
+	for (let i = password.length; i < 8; i++) {
+		password += allChars[Math.floor(Math.random() * allChars.length)];
+	}
+
+	// Shuffle the password
+	return password
+		.split('')
+		.sort(() => Math.random() - 0.5)
+		.join('');
+};
+
+export const generateOTP = () => {
+	return crypto.randomInt(100000, 999999);
 };

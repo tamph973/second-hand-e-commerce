@@ -1,7 +1,7 @@
 import UserModel from '../models/user.model.js';
 import Errors from '../common/response/error.response.js';
 import sendEmail from '../configs/sendEmail.js';
-import changePasswordTemplate from '../utils/changePasswordTemplate.js';
+import { changePasswordTemplate } from '../templates/index.js';
 import bcrypt from 'bcrypt';
 import convertDate from '../utils/convertDate.js';
 
