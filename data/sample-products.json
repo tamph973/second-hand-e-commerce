@@ -1,0 +1,236 @@
+{
+	"sample_products": [
+		{
+			"title": "Điện Thoại Xiaomi 12S Pro máy cũ 99% hàng về",
+			"description": "📱📱📱Điện Thoại Xiaomi 12S Pro máy cũ hàng về nhiều\n\n✅ Bản 8/128 tình trạng máy 99%  - Giá : 4.700.000đ  \n✅ Bản 12/256 tình trạng máy 99%  - Giá : .4.990.000đ\n\n ✅ Bản 12/256 rom quốc tế tình trạng máy 99%  - Giá : .5.490.000đ\n \nVĩnh An Mobile _ 𝐓𝐏. 𝐇Ồ 𝐂𝐇Í 𝐌𝐈𝐍𝐇\n🏠 Đc: 012D đường Tống Văn Trân , Phường 5, Quận 11\nHttps ://vinhanmobile•vn\n🛠️ 𝐂𝐡í𝐧𝐡 𝐒á𝐜𝐡 𝐁ả𝐨 𝐇à𝐧𝐡 :\n- Bao đổi 1 đổi 1 trong 7 ngày sử dụng\n- Bảo hành 12 tháng PHẦN CỨNG\n\n🚚 𝐕ậ𝐧 𝐜𝐡𝐮𝐲ể𝐧 cod , 𝐠𝐢𝐚𝐨 𝐡à𝐧𝐠 𝐭𝐨à𝐧 𝐪𝐮ố𝐜 , 𝐤𝐢ể𝐦 𝐭𝐫𝐚 𝐡à𝐧𝐠 𝐫ồ𝐢 𝐭𝐡𝐚𝐧𝐡 𝐭𝐨á𝐧",
+			"price": 4700000,
+			"priceRange": {
+				"min": 4700000,
+				"max": 5490000
+			},
+			"categoryId": "507f1f77bcf86cd799439011",
+			"brandId": "507f1f77bcf86cd799439012",
+			"images": [
+				{
+					"url": "https://cdn.chotot.com/7DCx7KMDPGU4j6FsUTgV8ikhO6jonLjUpBYEdar7K9U/preset:view/plain/20d63561d7b2c48b4250072e64b6d75f-2892057407286179613.jpg",
+					"thumbnail": "https://cdn.chotot.com/nDClLQiZbJILmnTPJ8NckCAZQ_7XlNDNGO4YgdViHD4/preset:listing/plain/20d63561d7b2c48b4250072e64b6d75f-2892057407286179613.jpg",
+					"webp": "https://cdn.chotot.com/xljl24KG5ni-yMbUpgzEv3tOJC6D_koOh6j20QRWj7g/preset:listing/plain/20d63561d7b2c48b4250072e64b6d75f-2892057407286179613.webp",
+					"public_id": "chotot_20d63561d7b2c48b4250072e64b6d75f"
+				},
+				{
+					"url": "https://cdn.chotot.com/Igj5xjQUvnarGq8RLY2VI6MvbYwoL5EyU9mlPnnD1PI/preset:view/plain/11e6cb324775ccd9b08d68f6b5792ca7-2892057408244546663.jpg",
+					"thumbnail": "https://cdn.chotot.com/cOmDG_gZBxO2a8RDHKQnq-1oFsjyvI60ChvtgLPXZRY/preset:listing/plain/11e6cb324775ccd9b08d68f6b5792ca7-2892057408244546663.jpg",
+					"public_id": "chotot_11e6cb324775ccd9b08d68f6b5792ca7"
+				}
+			],
+			"thumbnail": {
+				"url": "https://cdn.chotot.com/nDClLQiZbJILmnTPJ8NckCAZQ_7XlNDNGO4YgdViHD4/preset:listing/plain/20d63561d7b2c48b4250072e64b6d75f-2892057407286179613.jpg",
+				"public_id": "chotot_20d63561d7b2c48b4250072e64b6d75f"
+			},
+			"variants": [
+				{
+					"name": "Bản 8/128 tình trạng máy 99%",
+					"price": 4700000,
+					"stock": 5,
+					"attributes": {
+						"capacity": "128GB",
+						"ram": "8GB",
+						"condition": "99%"
+					}
+				},
+				{
+					"name": "Bản 12/256 tình trạng máy 99%",
+					"price": 4990000,
+					"stock": 3,
+					"attributes": {
+						"capacity": "256GB",
+						"ram": "12GB",
+						"condition": "99%"
+					}
+				},
+				{
+					"name": "Bản 12/256 rom quốc tế tình trạng máy 99%",
+					"price": 5490000,
+					"stock": 2,
+					"attributes": {
+						"capacity": "256GB",
+						"ram": "12GB",
+						"condition": "99%",
+						"rom": "quốc tế"
+					}
+				}
+			],
+			"attributes": [
+				{
+					"id": "mobile_model",
+					"value": "12s",
+					"label": "Dòng máy"
+				},
+				{
+					"id": "mobile_capacity",
+					"value": "128 GB",
+					"label": "Dung lượng"
+				},
+				{
+					"id": "elt_warranty",
+					"value": "12 tháng",
+					"label": "Chính sách bảo hành"
+				}
+			]
+		},
+		{
+			"title": "Tủ lạnh Samsung Inverter 208L RT20HAR8DBU/XV máy cũ 95%",
+			"description": "🏠 Tủ lạnh Samsung Inverter 208L RT20HAR8DBU/XV máy cũ 95%\n\n✅ Tình trạng: Máy cũ 95%, hoạt động tốt\n✅ Dung tích: 208L\n✅ Công nghệ: Inverter tiết kiệm điện\n✅ Màu sắc: Đen\n✅ Giá: 2.800.000đ\n\n📍 Địa chỉ: 012d Tống văn trân, Phường 5, Quận 11, TP.HCM\n📞 Liên hệ: 0901234567\n\n🛠️ Bảo hành: 3 tháng\n🚚 Vận chuyển: COD toàn quốc",
+			"price": 2800000,
+			"priceRange": {
+				"min": 2800000,
+				"max": 2800000
+			},
+			"categoryId": "507f1f77bcf86cd799439013",
+			"brandId": "507f1f77bcf86cd799439014",
+			"images": [
+				{
+					"url": "https://example.com/fridge1.jpg",
+					"thumbnail": "https://example.com/fridge1_thumb.jpg",
+					"public_id": "fridge_samsung_208l_1"
+				}
+			],
+			"thumbnail": {
+				"url": "https://example.com/fridge1_thumb.jpg",
+				"public_id": "fridge_samsung_208l_1"
+			},
+			"variants": [],
+			"attributes": [
+				{
+					"id": "capacity",
+					"value": "208L",
+					"label": "Dung tích"
+				},
+				{
+					"id": "condition",
+					"value": "95%",
+					"label": "Tình trạng"
+				},
+				{
+					"id": "warranty",
+					"value": "3 tháng",
+					"label": "Bảo hành"
+				}
+			]
+		},
+		{
+			"title": "Áo thun nam basic cotton 100% size M-L-XL",
+			"description": "👕 Áo thun nam basic cotton 100% chất lượng cao\n\n✅ Chất liệu: Cotton 100% mềm mại\n✅ Size: M, L, XL\n✅ Màu sắc: Trắng, Đen, Xanh\n✅ Giá: 120.000đ/áo\n\n📍 Địa chỉ: 012d Tống văn trân, Phường 5, Quận 11, TP.HCM\n📞 Liên hệ: 0901234567\n\n🚚 Vận chuyển: COD toàn quốc",
+			"price": 120000,
+			"priceRange": {
+				"min": 120000,
+				"max": 120000
+			},
+			"categoryId": "507f1f77bcf86cd799439015",
+			"brandId": "507f1f77bcf86cd799439016",
+			"images": [
+				{
+					"url": "https://example.com/tshirt1.jpg",
+					"thumbnail": "https://example.com/tshirt1_thumb.jpg",
+					"public_id": "tshirt_basic_1"
+				}
+			],
+			"thumbnail": {
+				"url": "https://example.com/tshirt1_thumb.jpg",
+				"public_id": "tshirt_basic_1"
+			},
+			"variants": [
+				{
+					"name": "Size M - Trắng",
+					"price": 120000,
+					"stock": 10,
+					"attributes": {
+						"size": "M",
+						"color": "Trắng"
+					}
+				},
+				{
+					"name": "Size L - Đen",
+					"price": 120000,
+					"stock": 8,
+					"attributes": {
+						"size": "L",
+						"color": "Đen"
+					}
+				},
+				{
+					"name": "Size XL - Xanh",
+					"price": 120000,
+					"stock": 5,
+					"attributes": {
+						"size": "XL",
+						"color": "Xanh"
+					}
+				}
+			],
+			"attributes": [
+				{
+					"id": "material",
+					"value": "Cotton 100%",
+					"label": "Chất liệu"
+				},
+				{
+					"id": "style",
+					"value": "Basic",
+					"label": "Kiểu dáng"
+				}
+			]
+		}
+	],
+	"test_cases": {
+		"valid_product": {
+			"title": "Test Product",
+			"description": "Test description",
+			"price": 1000000,
+			"categoryId": "507f1f77bcf86cd799439011",
+			"brandId": "507f1f77bcf86cd799439012"
+		},
+		"invalid_product_no_title": {
+			"description": "Test description",
+			"price": 1000000,
+			"categoryId": "507f1f77bcf86cd799439011"
+		},
+		"invalid_product_no_price": {
+			"title": "Test Product",
+			"description": "Test description",
+			"categoryId": "507f1f77bcf86cd799439011"
+		},
+		"invalid_product_no_category": {
+			"title": "Test Product",
+			"description": "Test description",
+			"price": 1000000
+		},
+		"product_with_variants": {
+			"title": "Product with Variants",
+			"description": "Product with multiple variants",
+			"price": 1000000,
+			"categoryId": "507f1f77bcf86cd799439011",
+			"brandId": "507f1f77bcf86cd799439012",
+			"variants": [
+				{
+					"name": "Variant 1",
+					"price": 1000000,
+					"stock": 5,
+					"attributes": {
+						"color": "Red",
+						"size": "M"
+					}
+				},
+				{
+					"name": "Variant 2",
+					"price": 1200000,
+					"stock": 3,
+					"attributes": {
+						"color": "Blue",
+						"size": "L"
+					}
+				}
+			]
+		}
+	}
+}

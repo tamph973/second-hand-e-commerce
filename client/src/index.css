@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @theme {
+	--color-base: #00adb5;
+	--color-base-2: #eeeeee;
+	--color-base-3: #e2efe7;
+	--color-base-overplay: rgba(0, 173, 181, 0.5);
+	--color-base-content: #222831;
+	--color-base-box: #f4fef4;
+	--color-facebook-icon: #0679e7;
+	--color-instagram-icon: #ff0095;
+	--color-linked-icon: #0a66c2;
+	--color-github-icon: #686d76;
+}
+*/
+html {
+	@apply p-0 m-0 box-border;
+}
+
+body {
+	@apply tracking-wider text-white font-Roboto;
+}
+
+.input-disabled {
+	@apply opacity-50 cursor-not-allowed bg-gray-200 text-gray-700;
+}
+
+/* Text Truncate Utilities */
+@layer utilities {
+	/* Single line truncate */
+	.text-truncate-1 {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	/* Two lines truncate */
+	.text-truncate-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+	}
+
+	/* Three lines truncate */
+	.text-truncate-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+	}
+
+	/* Four lines truncate */
+	.text-truncate-4 {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+	}
+
+	/* Product title truncate */
+	.product-title-truncate {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+		min-height: 48px;
+		max-height: 48px;
+		line-height: 1.2;
+	}
+
+	/* Product description truncate */
+	.product-description-truncate {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+		min-height: 32px;
+		max-height: 32px;
+		line-height: 1.4;
+	}
+
+	/* Location truncate */
+	.location-truncate {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 90px;
+	}
+
+	/* Time ago truncate */
+	.time-ago-truncate {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 80px;
+	}
+
+	/* Modal description truncate */
+	.modal-description-truncate {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+		min-height: 32px;
+		max-height: 32px;
+		line-height: 1.4;
+	}
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+
