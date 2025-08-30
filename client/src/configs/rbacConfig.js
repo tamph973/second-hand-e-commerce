@@ -1,0 +1,35 @@
+// Định nghĩa các Role của user trong hệ thống
+export const ROLES = {
+	ADMIN: 'ADMIN',
+	USER: 'USER',
+	SELLER: 'SELLER',
+};
+
+// Định nghĩa các quyền - Permission
+export const PERMISSIONS = {
+	VIEW_DASHBOARD: 'VIEW_DASHBOARD',
+	VIEW_USERS: 'VIEW_USERS',
+	VIEW_ORDERS: 'VIEW_ORDERS',
+	VIEW_PRODUCTS: 'VIEW_PRODUCTS',
+	VIEW_REVIEWS: 'VIEW_REVIEWS',
+	VIEW_SETTINGS: 'VIEW_SETTINGS',
+	VIEW_SUPPORT: 'VIEW_SUPPORT',
+};
+
+// Kết hợp role và permission để tạo ra các quyền truy cập cho user
+export const rolePermissions = {
+	[ROLES.ADMIN]: Object.values(PERMISSIONS), // all permissions for admin
+	[ROLES.USER]: [
+		PERMISSIONS.VIEW_PRODUCTS,
+		PERMISSIONS.VIEW_ORDERS,
+		PERMISSIONS.VIEW_REVIEWS,
+		PERMISSIONS.VIEW_SETTINGS,
+		PERMISSIONS.VIEW_SUPPORT,
+	],
+	[ROLES.SELLER]: [
+		PERMISSIONS.VIEW_DASHBOARD,
+		PERMISSIONS.VIEW_ORDERS,
+		PERMISSIONS.VIEW_PRODUCTS,
+		PERMISSIONS.VIEW_REVIEWS,
+	],
+};
